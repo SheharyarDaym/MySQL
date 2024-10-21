@@ -1,0 +1,6 @@
+# Problem Link : https://www.hackerrank.com/challenges/asian-population/problem
+
+select sum(c.population) as Sum_of_Populations
+from City c
+join Country co on c.countrycode = co.code
+where co.continent = 'asia';
