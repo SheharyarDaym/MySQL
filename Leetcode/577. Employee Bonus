@@ -4,3 +4,8 @@ from Employee as e
 left join Bonus b
 on e.empid = b.empid
 where b.bonus < 1000 or b.bonus is null;
+
+# Explanation:
+# b.bonus < 1000: This ensures that only records with a bonus less than 1000 are selected.
+# OR b.bonus IS NULL: This ensures that employees without a bonus (i.e., those with NULL in the bonus column)
+# are still included in the result, as per the behavior of LEFT JOIN.
