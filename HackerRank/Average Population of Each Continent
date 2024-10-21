@@ -1,0 +1,7 @@
+# Problem Link : https://www.hackerrank.com/challenges/average-population-of-each-continent/problem
+
+select co.Continent, floor(avg(c.Population)) as Average_Population
+from City c
+join Country co
+on c.countrycode = co.code
+group by co.Continent;
