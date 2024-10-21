@@ -1,4 +1,5 @@
 # Problem Link : https://www.hackerrank.com/challenges/average-population-of-each-continent/problem
+# Difficulty : EASY
 
 select co.Continent, floor(avg(c.Population)) as Average_Population
 from City c
