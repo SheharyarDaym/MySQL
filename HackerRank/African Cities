@@ -1,0 +1,7 @@
+# Problem Link : https://www.hackerrank.com/challenges/african-cities/problem
+
+select c.name
+from City c
+join country as co
+on c.countrycode = co.code
+where co.continent like 'Africa'; -- can also use = instead of like
