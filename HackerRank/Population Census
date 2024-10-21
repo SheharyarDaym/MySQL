@@ -1,4 +1,5 @@
 # Problem Link : https://www.hackerrank.com/challenges/asian-population/problem
+# Difficulty : EASY
 
 select sum(c.population) as Sum_of_Populations
 from City c
