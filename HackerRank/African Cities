@@ -1,4 +1,5 @@
 # Problem Link : https://www.hackerrank.com/challenges/african-cities/problem
+# Difficulty : EASY
 
 select c.name
 from City c
