@@ -1,4 +1,6 @@
-# Write your MySQL query statement below
+# Problem Link: https://leetcode.com/problems/employee-bonus/description/
+
+
 select e.name, b.bonus
 from Employee as e
 left join Bonus b
