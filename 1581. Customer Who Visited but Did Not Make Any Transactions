@@ -1,0 +1,16 @@
+# Write your MySQL query statement below
+select v.customer_id, COUNT(v.visit_id) AS count_no_trans 
+from Visits as v
+left join Transactions as t
+on v.visit_id = t.visit_id
+where t.transaction_id is null 
+group by(v.customer_id);
+
+
+-- Explanation of line 6: what is the working of where clause here..
+
+-- The condition WHERE t.transaction_id IS NULL in your 
+-- query is used to filter the results and return only those 
+-- rows where a corresponding entry in the Transactions table 
+-- does not exist for a given visit_id. This effectively finds 
+-- customers who made visits but did not make any transactions.
