@@ -1,0 +1,10 @@
+# Problem Link : https://leetcode.com/problems/rank-scores
+# Difficulty : Medium
+
+select score , dense_rank() over (order by score desc) as 'rank'
+from scores
+order by score desc;
+
+# rank() and dense_rank() are built-in functions in windows..
+# The DENSE_RANK() function works similarly to RANK(), but it handles ties differently. 
+# It assigns the same rank to rows with equal values, but the next rank is always consecutive, without gaps.
