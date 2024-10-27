@@ -1,0 +1,6 @@
+# Problem Link : https://www.hackerrank.com/challenges/revising-aggregations-sum
+# Difficulty : Easy
+
+select sum(population)
+from city
+where district = 'california';
