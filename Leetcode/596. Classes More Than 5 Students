@@ -1,0 +1,6 @@
+# Problem Link : https://leetcode.com/problems/classes-more-than-5-students
+# Difficulty : Easy
+
+select class from courses
+group by class
+having count(1) >= 4;
