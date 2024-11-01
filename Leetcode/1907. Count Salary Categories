@@ -1,0 +1,29 @@
+# Problem Link : 
+# Difficulty : Medium
+
+# Union used to combined all select statements
+select 
+    'Low Salary' as category,
+    count(case when income < 20000 then account_id end) as accounts_count
+from accounts
+
+union all
+
+select 
+    'Average Salary' as category,
+    count(case when income between 20000 and 50000 then account_id end) as accounts_count
+from accounts
+
+union all
+
+select 
+    'High Salary' as category,
+    count(case when income > 50000 then account_id end) as accounts_count
+from accounts
+
+order by 
+    case category
+        when 'low salary' then 3
+        when 'average salary' then 2
+        when 'high salary' then 1
+    end;
